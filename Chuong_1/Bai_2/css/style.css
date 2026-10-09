@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.tour-container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #A8861B;
+    padding: 30px;
+    margin: 40px auto;
+    box-sizing: border-box;
+}
+
+.tour-quote {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tour-image {
+    float: right;
+    width: 40%;
+    max-width: 300px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.tour-text {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.clearfix {
+    clear: both;
+}

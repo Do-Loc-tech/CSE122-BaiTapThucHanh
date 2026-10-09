@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.banner {
+    background-color: #C62828;
+    background-image: url('../img/Nen_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.banner .logo {
+    height: 40px;
+    margin-right: 15px;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.main-layout {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 70px);
+}
+
+.sidebar-menu {
+    background: linear-gradient(to bottom, #C62828, #8E0000);
+    width: 200px;
+    flex: 0 0 200px;
+    box-sizing: border-box;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu li.active {
+    background-color: #8E0000;
+}
+
+.content-area {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sub-menu-box {
+    background-color: #FFE082;
+    border-radius: 6px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+}
+
+.sub-menu-box ul {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.sub-menu-box li {
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.inner-content {
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+    min-height: 250px;
+    box-sizing: border-box;
+}
+
+.inner-content h2 {
+    color: #C62828;
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.center-text {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.ads-column {
+    width: 160px;
+    flex: 0 0 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.ads-column img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    
+    .sidebar-menu, .content-area, .ads-column {
+        width: 100%;
+        flex: none;
+    }
+    
+    .sub-menu-box ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .ads-column {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .ads-column img {
+        width: 140px;
+    }
+}

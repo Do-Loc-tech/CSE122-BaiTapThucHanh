@@ -1,0 +1,122 @@
+:root {
+    --bg: #f8fafc;
+    --chu: #0f172a;
+    --the: #ffffff;
+    --vien: #e2e8f0;
+    --nhan: #2563eb;
+    --nut-nen: #cbd5e1;
+    --nut-bat: #2563eb;
+}
+
+body.toi {
+    --bg: #0f172a;
+    --chu: #e2e8f0;
+    --the: #1e293b;
+    --vien: #334155;
+    --nhan: #60a5fa;
+    --nut-nen: #334155;
+    --nut-bat: #60a5fa;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--chu);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 550px;
+}
+
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header-area h2 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.card {
+    background-color: var(--the);
+    border: 1px solid var(--vien);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.card-title {
+    color: var(--nhan);
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    transition: color 0.4s ease;
+}
+
+.card-text {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.footer-status {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--nut-nen);
+    border-radius: 34px;
+    transition: background-color 0.3s ease;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+input:checked + .slider {
+    background-color: var(--nut-bat);
+}
+
+input:checked + .slider::before {
+    transform: translateX(24px);
+}

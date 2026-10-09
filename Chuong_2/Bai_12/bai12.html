@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 12 - In Lịch Block</title>
+    <link class="styles" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="calendar-block">
+            <div id="res-year" class="year">2026</div>
+            <div id="res-month" class="month">Tháng 12</div>
+            <div id="res-day" class="day">24</div>
+            <div id="res-weekday" class="weekday">Thứ hai</div>
+        </div>
+
+        <div id="greeting" class="greeting">Chào buổi sáng!</div>
+
+        <div class="input-form">
+            <div class="input-group">
+                <label>Ngày</label>
+                <input type="number" id="inp-day" value="24" min="1" max="31">
+            </div>
+            <div class="input-group">
+                <label>Tháng</label>
+                <input type="number" id="inp-month" value="12" min="1" max="12">
+            </div>
+            <div class="input-group">
+                <label>Năm</label>
+                <input type="number" id="inp-year" value="2026">
+            </div>
+            <button id="btn-print">In lịch</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

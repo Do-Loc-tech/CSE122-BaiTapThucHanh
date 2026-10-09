@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10 — Trang liên hệ (biểu mẫu HTML)</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <form class="contact-form">
+        <div class="form-header">
+            <h2>Liên hệ với chúng tôi</h2>
+            <p>Vui lòng điền thông tin bên dưới, chúng tôi sẽ phản hồi trong 24 giờ.</p>
+        </div>
+
+        <div class="form-body">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullname">Họ và tên</label>
+                    <input type="text" id="fullname" value="Đỗ Xuân Lộc">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="245117****@e.tlu.edu.vn">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="tel" id="phone" value="0987 654 321">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Chủ đề</label>
+                    <select id="subject">
+                        <option value="khoahoc">Hỏi về khoá học</option>
+                        <option value="khac">Vấn đề khác</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="content">Nội dung</label>
+                <textarea id="content" rows="4">Em muốn hỏi về lịch nộp bài tập môn Lập trình Web ạ.</textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="agree" checked>
+                <label for="agree">Tôi đồng ý nhận email phản hồi.</label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Gửi liên hệ</button>
+                <button type="reset" class="btn-reset">Nhập lại</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

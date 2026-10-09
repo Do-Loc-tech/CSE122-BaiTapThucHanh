@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 20 - Hoa hồng</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="gallery-container">
+        <div class="preview-area">
+            <img src="img/hoahong.gif" alt="Hoa hồng" id="target-image">
+            <div class="gold-text">Special For You</div>
+        </div>
+
+        <div class="button-group">
+            <button class="effect-btn active" data-filter="grayscale(1)" data-transform="none">Gray</button>
+            <button class="effect-btn" data-filter="contrast(3) invert(1) grayscale(1)" data-transform="none">Xray</button>
+            <button class="effect-btn" data-filter="invert(1)" data-transform="none">Invert</button>
+            <button class="effect-btn" data-filter="none" data-transform="scaleX(-1)">FlipH</button>
+            <button class="effect-btn" data-filter="none" data-transform="scaleY(-1)">FlipV</button>
+            <button class="effect-btn" data-filter="brightness(1.5) drop-shadow(0 0 15px #ffeb3b)" data-transform="none">Glow</button>
+            <button class="effect-btn" data-filter="drop-shadow(8px 8px 10px rgba(0,0,0,0.8))" data-transform="none">Shadow</button>
+            <button class="effect-btn" data-filter="drop-shadow(12px 12px 5px rgba(0,0,0,0.9))" data-transform="none">Bold Shadow</button>
+            <button class="effect-btn" data-filter="drop-shadow(5px 5px 5px rgba(0,0,0,0.5))" data-transform="none">DropShadow</button>
+            <button class="effect-btn" data-filter="blur(3px)" data-transform="none">Blur</button>
+            <button class="effect-btn" data-filter="url(#wave-filter)" data-transform="none">Wave</button>
+            <button class="effect-btn" data-filter="contrast(2) brightness(0.8)" data-transform="none">Mask</button>
+            <button class="effect-btn" data-filter="opacity(0.4)" data-transform="none">Alpha</button>
+        </div>
+    </div>
+
+    <svg width="0" height="0">
+        <defs>
+            <filter id="wave-filter">
+                <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="15" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+    <script>
+        const buttons = document.querySelectorAll('.effect-btn');
+        const image = document.getElementById('target-image');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+                const transformValue = button.getAttribute('data-transform');
+
+                image.style.filter = filterValue;
+                image.style.transform = transformValue;
+            });
+        });
+    </script>
+
+</body>
+</html>

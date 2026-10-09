@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    color: #333333;
+    background-color: #F5F5F5;
+}
+
+.header-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-title {
+    background-color: #C8102E;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    background-color: #FBE3E8;
+    color: #C8102E;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 20px auto 0 auto;
+    background-color: #FFFFFF;
+    display: flex;
+    padding: 20px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.column {
+    flex: 1;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+.left-col {
+    border-right: 1px solid #C8102E;
+}
+
+.right-col {
+    position: relative;
+}
+
+.product-img {
+    float: right;
+    width: 150px;
+    height: auto;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    color: #C8102E;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    clear: left;
+}
+
+.section-title::before {
+    content: "❑ ";
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.content-list {
+    padding-left: 15px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    list-style-type: disc;
+}
+
+.content-list li {
+    margin-bottom: 8px;
+    text-align: justify;
+}

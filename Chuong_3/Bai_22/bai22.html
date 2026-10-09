@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 22 - Chế độ Sáng / Tối</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="toi">
+
+    <div class="app-container">
+        <header class="header-area">
+            <h2>Chế độ Tối / Sáng</h2>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle" checked>
+                <span class="slider"></span>
+            </label>
+        </header>
+
+        <div class="card">
+            <h3 class="card-title">Biến CSS (CSS Variables)</h3>
+            <p class="card-text">Toàn bộ màu sắc được khai báo trong :root và ghi đè bằng class .toi.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="card-title">Chuyển đổi bằng JavaScript</h3>
+            <p class="card-text">Nút gạt thêm/bỏ class .toi trên &lt;body&gt; &mdash; mọi thành phần tự đổi màu.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="card-title">Chuyển màu mượt</h3>
+            <p class="card-text">Dùng transition để màu nền và chữ chuyển dần, không bị giật.</p>
+        </div>
+
+        <footer class="footer-status" id="status-text">
+            Đây là giao diện ở chế độ Tối (đang bật).
+        </footer>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const statusText = document.getElementById('status-text');
+
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                body.classList.add('toi');
+                statusText.textContent = 'Đây là giao diện ở chế độ Tối (đang bật).';
+            } else {
+                body.classList.remove('toi');
+                statusText.textContent = 'Đây là giao diện ở chế độ Sáng (đang tắt).';
+            }
+        });
+    </script>
+
+</body>
+</html>
